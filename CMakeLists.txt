@@ -303,5 +303,5 @@ add_subdirectory(Apps/3DLChannel)
 add_subdirectory(Tests/FieldBlock)
 add_subdirectory(Tests/ConservationTest3D)
 add_subdirectory(Apps/2DFreeSurfaceDamBreaking)
-
-
+add_subdirectory(Apps/2DDambreak2)
+add_subdirectory(Apps/2DWaveOWC)

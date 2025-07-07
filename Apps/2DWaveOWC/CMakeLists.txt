@@ -1,9 +1,9 @@
 
 cmake_minimum_required(VERSION 3.18)
 # Application name
-set(AppName Free2D)
+set(AppName OWC)
 # A list of C/C++ source files (.cpp) developed for the application
-set(AppSrc lbm2d_freesurface.cpp)
+set(AppSrc OWC.cpp)
 # A list of C/C++ source and head files from the Src direction
 # (i.e. provided by MPLB) which are used in the application
 set(LibSrc evolution.cpp scheme.cpp scheme_wrapper.cpp configuration.cpp model.cpp model_wrapper.cpp block.cpp flowfield.cpp flowfield_wrapper.cpp boundary.cpp boundary_wrapper.cpp)
@@ -20,9 +20,9 @@ if (NOT OPTIMISE)
 else()
     # set the files needed to be translated by ops.py from the app side
     # source file enclosing wrap function
-    set(AppSrcGenList lbm2d_freesurface.cpp)
+    set(AppSrcGenList OWC.cpp)
     # source file for kernel functions
-    set(AppKernelGenList freesurface2d_kernel.inc)
+    set(AppKernelGenList OWC2d_kernel.inc)
     # if any variables are declared in both CPU and GPU memory space.
     set(AppHeadList "")
     CreateTempDir()
