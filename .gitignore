@@ -7,7 +7,7 @@ numawrap*
 *.o
 *.a
 *.cfg
-*.json
+# *.json
 __pycache__/PostProcess\.cpython-36\.pyc
 *.ipynb
 # Exlude eclipse files.

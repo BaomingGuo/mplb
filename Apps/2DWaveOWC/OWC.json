@@ -1,0 +1,152 @@
+{
+  "WavenumberKH":1.0,
+  "WaterDepth":0.5,
+  "WaveAmplitude":0.012,
+  "SoundofWater":50,
+  "ns":2,
+  "AbsorbConst":20,
+  "AbsorbLength":2,
+  "L0":0.5,
+  "ChamberCoef":0.04889,
+
+  "CaseName": "FloatFSIKH1.0",
+  "SpaceDim": 2,
+  "Transient": true,
+  "BlockIds": [
+    0
+  ],
+  "BlockNames": [
+    "Wave"
+  ],
+  "BlockSize": [
+    13000,
+    300
+  ],
+  "MeshSize": 0.005,
+  "StartPos": {
+    "0": [
+      -32,
+      0
+    ]
+  },
+  "CompoNames": [
+    "Fluid"
+  ],
+  "CompoIds": [
+    0
+  ],
+  "LatticeName": [
+    "d2q9"
+  ],
+  "TauRef": [
+    0.4e-7
+  ],
+  "MacroVarNames": [
+    "rho",
+    "u",
+    "v"
+  ],
+  "MacroVarIds": [
+    0,
+    1,
+    2
+  ],
+  "MacroCompoIds": [
+    0,
+    0,
+    0
+  ],
+  "MacroVarTypes": [
+    "Variable_Rho",
+    "Variable_U_Force",
+    "Variable_V_Force"
+  ],
+  "CollisionType": [
+    "Collision_BGKIsothermal2nd"
+  ],
+  "CollisionCompoIds": [
+    0
+  ],
+  "InitialType": [
+    "Initial_BGKFeq2nd"
+  ],
+  "InitialCompoIds": [
+    0
+  ],
+  "BodyForceType": [
+    "BodyForce_1st"
+  ],
+  "BodyForceCompoId": [
+    0
+  ],
+  "SchemeType": "Scheme_StreamCollision",
+  "BoundaryCondition0": {
+    "BlockIndex": 0,
+    "ComponentId": 0,
+    "GivenVars": [
+      0,
+      0
+    ],
+    "BoundarySurface": "Left",
+    "BoundaryScheme": "BounceBack",
+    "BoundaryType": "OutLet",
+    "MacroVarTypesatBoundary": [
+      "Variable_U",
+      "Variable_V"
+    ]
+  },
+  "BoundaryCondition1": {
+    "BlockIndex": 0,
+    "ComponentId": 0,
+    "GivenVars": [
+      0,
+      0
+    ],
+    "BoundarySurface": "Right",
+    "BoundaryScheme": "BounceBack",
+    "BoundaryType": "OutLet",
+    "MacroVarTypesatBoundary": [
+      "Variable_U",
+      "Variable_V"
+    ]
+  },
+  "BoundaryCondition2": {
+    "BlockIndex": 0,
+    "ComponentId": 0,
+    "GivenVars": [
+      0,
+      0
+    ],
+    "BoundarySurface": "Top",
+    "BoundaryScheme": "BounceBack",
+    "BoundaryType": "Wall",
+    "MacroVarTypesatBoundary": [
+      "Variable_U",
+      "Variable_V"
+    ]
+  },
+  "BoundaryCondition3": {
+    "BlockIndex": 0,
+    "ComponentId": 0,
+    "GivenVars": [
+      0,
+      0
+    ],
+    "BoundarySurface": "Bottom",
+    "BoundaryScheme": "BounceBack",
+    "BoundaryType": "Wall",
+    "MacroVarTypesatBoundary": [
+      "Variable_U",
+      "Variable_V"
+    ]
+  },
+
+  "TimeStepsToRun": 1500000,
+  "CurrentTimeStep": 0,
+  "ConvergenceCriteria": 1e-8,
+  "CheckPeriod": 2000,
+  "ConvertOutputTo": "VTK",
+  "ConvertStartAt":6000,
+  "ConvertEndAt":6000
+
+}
